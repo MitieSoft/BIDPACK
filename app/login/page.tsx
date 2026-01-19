@@ -50,9 +50,37 @@ export default function LoginPage() {
             Tender Compliance Operating System
           </p>
         </div>
+        
         <Card>
           <LoginForm />
         </Card>
+
+        {/* Demo Credentials Info */}
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-3">
+            Demo Accounts
+          </h3>
+          <div className="space-y-2 text-sm">
+            <div className="bg-white dark:bg-gray-800 rounded p-3">
+              <p className="font-medium text-gray-900 dark:text-white mb-1">Admin Account:</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-mono">admin@bidpack.co.uk</span>
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                Password: <span className="font-mono">admin123</span>
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded p-3">
+              <p className="font-medium text-gray-900 dark:text-white mb-1">Subscription User:</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-mono">user@demo-construction.co.uk</span>
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                Password: <span className="font-mono">user123</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

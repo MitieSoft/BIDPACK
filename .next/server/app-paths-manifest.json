@@ -1,7 +1,7 @@
 {
-  "/admin/orgs/page": "app/admin/orgs/page.js",
   "/bids/page": "app/bids/page.js",
   "/policies/page": "app/policies/page.js",
   "/policies/[id]/edit/page": "app/policies/[id]/edit/page.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/dashboard/page": "app/dashboard/page.js",
+  "/login/page": "app/login/page.js"
 }
