@@ -7,7 +7,10 @@ export async function getACUBalance(): Promise<ACUBalance> {
 
   const balance = getCurrentACUBalance()
   const usageThisMonth = getACUUsageThisMonth()
-  const monthlyAllocation = mockSubscription.acuMonthly
+  
+  // Determine monthly allocation based on plan type
+  // Starter: 50 ACUs/month, Professional: 200 ACUs/month
+  const monthlyAllocation = mockSubscription.planType === 'professional' ? 200 : 50
 
   return {
     balance,
