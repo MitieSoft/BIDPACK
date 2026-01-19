@@ -1,9 +1,12 @@
 // AI Controls Page
+'use client'
+
+import { useEffect, useState } from 'react'
 import GlobalAIToggle from '@/components/admin/GlobalAIToggle'
 import ACULimitsManager from '@/components/admin/ACULimitsManager'
+import AdminRouteGuard from '@/components/admin/AdminRouteGuard'
 import { getGlobalAISettings, updateGlobalAISettings } from '@/lib/api/adminService'
 import PageHeader from '@/components/PageHeader'
-import { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import type { GlobalAISettings } from '@/lib/api/adminService'
 

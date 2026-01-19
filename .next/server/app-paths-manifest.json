@@ -1,6 +1,4 @@
 {
-  "/admin/page": "app/admin/page.js",
-  "/admin/abuse/page": "app/admin/abuse/page.js",
   "/admin/orgs/page": "app/admin/orgs/page.js",
   "/bids/page": "app/bids/page.js",
   "/policies/page": "app/policies/page.js",
