@@ -50,8 +50,16 @@ export default function BidForm({ bidId, initialData, onSuccess }: BidFormProps)
         await updateBid(bidId, data)
         toast.success('Bid updated successfully')
       } else {
-        // Create new bid
-        const newBid = await createBid(data)
+        // Create new bid - ensure required fields are present
+        if (!data.clientName || !data.deadline) {
+          toast.error('Client name and deadline are required')
+          return
+        }
+        const newBid = await createBid({
+          clientName: data.clientName,
+          deadline: data.deadline,
+          status: data.status,
+        })
         toast.success('Bid created successfully')
         router.push(`/bids/${newBid.id}`)
       }
