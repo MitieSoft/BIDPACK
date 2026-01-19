@@ -40,7 +40,15 @@ export default function InviteMemberModal({ isOpen, onClose, onSuccess }: Invite
   const onSubmit = async (data: InviteFormData) => {
     setIsLoading(true)
     try {
-      const response = await inviteMember(data)
+      // Ensure required fields are present
+      if (!data.email || !data.role) {
+        toast.error('Email and role are required')
+        return
+      }
+      const response = await inviteMember({
+        email: data.email,
+        role: data.role,
+      })
       toast.success(response.message)
       reset()
       onSuccess?.()
