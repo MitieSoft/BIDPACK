@@ -1,4 +1,6 @@
 // Edit Policy Page
+'use client'
+
 import { useParams } from 'next/navigation'
 import PolicyEditor from '@/components/policies/PolicyEditor'
 import PageHeader from '@/components/PageHeader'

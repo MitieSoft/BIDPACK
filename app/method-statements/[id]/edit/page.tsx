@@ -1,4 +1,6 @@
 // Edit Method Statement Page
+'use client'
+
 import { useParams } from 'next/navigation'
 import MethodStatementBuilder from '@/components/method-statements/MethodStatementBuilder'
 import PageHeader from '@/components/PageHeader'
